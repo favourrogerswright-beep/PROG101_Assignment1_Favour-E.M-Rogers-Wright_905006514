@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PROGassignment 1"/>
+        <attribute name="authors" value="FAVOUR ROGERS WRIGHT"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-09 05:03:46 PM"/>
+        <attribute name="created" value="RkFWT1VSIFJPR0VSUyBXUklHSFQ7REVTS1RPUC1QQzlST1NJOzIwMjYtMTEtMDk7MDk6MDI6MzIgQU07MzgzNg=="/>
+        <attribute name="edited" value="RkFWT1VSIFJPR0VSUyBXUklHSFQ7REVTS1RPUC1QQzlST1NJOzIwMjYtMTEtMDk7MDU6MDM6NDYgUE07MTszOTYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Choice" type="Integer" array="False" size=""/>
+            <declare name="cropName" type="String" array="False" size=""/>
+            <declare name="PlantingDate" type="String" array="False" size=""/>
+            <declare name="harvestQuantity" type="Real" array="False" size=""/>
+            <declare name="farmingExpenses" type="Real" array="False" size=""/>
+            <declare name="recordCount" type="Integer" array="False" size=""/>
+            <assign variable="recordCount" expression="0"/>
+            <declare name="cropNames" type="String" array="True" size="100"/>
+            <declare name="plantingDates" type="String" array="True" size="100"/>
+            <declare name="harvestQuantities" type="Real" array="True" size="100"/>
+            <declare name="farmingExpensesList" type="Real" array="True" size="100"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;WELCOME TO FARM RECORD MANAGEMENT SYSTEM&quot;" newline="True"/>
+            <output expression="&quot;1. Add Farm Record&quot;" newline="True"/>
+            <output expression="&quot;2. View Farms Records&quot;" newline="True"/>
+            <output expression="&quot;3. Exit&quot;" newline="True"/>
+            <input variable="Choice"/>
+            <if expression="Choice = 1">
+                <then>
+                    <output expression="&quot;Enter Crop Name:&quot;" newline="True"/>
+                    <input variable="CropName"/>
+                    <output expression="&quot;Enter Planting Date:&quot;" newline="True"/>
+                    <input variable="PlantingDate"/>
+                    <output expression="&quot;Enter Harvest Quantity:&quot;" newline="True"/>
+                    <input variable="harvestQuantity"/>
+                    <output expression="&quot;Enter Farming Expenses:&quot;" newline="True"/>
+                    <input variable="farmingExpenses"/>
+                    <assign variable="cropName[recordCount]" expression="cropName"/>
+                    <assign variable="plantingDates[recordCount]" expression="plantingDates"/>
+                    <assign variable="harvestQuantities[recordCount]" expression="harvestQuantity"/>
+                    <assign variable="farmingExpensesList[recordCount]" expression="farmingExpenses"/>
+                    <assign variable="recordcount" expression="recordcount + 1"/>
+                    <output expression="&quot;Farm record saved successfully&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="choice = 2">
+                        <then>
+                            <if expression="recordcount = 0">
+                                <then>
+                                    <output expression="&quot;No farm record available&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;FARM RECORDS&quot;" newline="True"/>
+                                    <for variable="i" start="0" end="recordcount - 1" direction="inc" step="1">
+                                        <output expression="cropNames[i]" newline="True"/>
+                                        <output expression="plantingDates[i]" newline="True"/>
+                                        <output expression="harvestQuantities[i]" newline="True"/>
+                                        <output expression="farmingExpensesList[i]" newline="True"/>
+                                    </for>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="choice = 3">
+                                <then>
+                                    <output expression="&quot;Thank you for using the system.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Invalid choice. Please try again.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
