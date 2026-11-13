@@ -6,3 +6,10 @@ A Simple Farm Record management designed to help small-scale farmers in sierra l
 <img width="1336" height="554" alt="image" src="https://github.com/user-attachments/assets/8602831c-ac51-48be-9b62-12c3e101b658" />
 <img width="1331" height="552" alt="image" src="https://github.com/user-attachments/assets/9594cf7a-c20b-4359-9347-768b9f65b9d4" />
 <img width="1014" height="548" alt="image" src="https://github.com/user-attachments/assets/daafd3a1-3ed0-40a3-b613-b302b313e9b5" />
+
+##Flowchart
+
+WELCOME TO FARM RECORD MANAGEMENT SYSTEM
+1. Add Farm Record
+2. View Farms Records
+3. Exit
